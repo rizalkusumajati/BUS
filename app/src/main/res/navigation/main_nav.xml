@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/loginFragment"
-        android:name="com.riztech.bus.presentation.LoginFragment"
+        android:name="com.riztech.bus.presentation.login.LoginFragment"
         android:label="fragment_login"
         tools:layout="@layout/fragment_login" >
         <action
@@ -16,7 +16,7 @@
     </fragment>
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.riztech.bus.presentation.HomeFragment"
+        android:name="com.riztech.bus.presentation.home.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" >
         <action
@@ -28,12 +28,12 @@
     </fragment>
     <fragment
         android:id="@+id/scanFragment"
-        android:name="com.riztech.bus.presentation.ScanFragment"
+        android:name="com.riztech.bus.presentation.scan.ScanFragment"
         android:label="fragment_scan"
         tools:layout="@layout/fragment_scan" />
     <fragment
         android:id="@+id/pilihJalurFragment"
-        android:name="com.riztech.bus.presentation.PilihJalurFragment"
+        android:name="com.riztech.bus.presentation.lines.PilihJalurFragment"
         android:label="fragment_pilih_jalur"
         tools:layout="@layout/fragment_pilih_jalur" />
 </navigation>

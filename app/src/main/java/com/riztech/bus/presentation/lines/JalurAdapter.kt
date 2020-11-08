@@ -1,4 +1,4 @@
-package com.riztech.bus.presentation
+package com.riztech.bus.presentation.lines
 
 import android.view.LayoutInflater
 import android.view.View
@@ -18,9 +18,12 @@ class JalurAdapter(private val list: ArrayList<String>, private val listener: On
         }
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): JalurViewHolder = JalurViewHolder(
-        LayoutInflater.from(parent.context).inflate(
-        R.layout.jalur_item, parent, false))
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): JalurViewHolder =
+        JalurViewHolder(
+            LayoutInflater.from(parent.context).inflate(
+                R.layout.jalur_item, parent, false
+            )
+        )
 
     override fun getItemCount(): Int = list.size
 

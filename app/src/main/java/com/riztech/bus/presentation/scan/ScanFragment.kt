@@ -1,4 +1,4 @@
-package com.riztech.bus.presentation
+package com.riztech.bus.presentation.scan
 
 import android.Manifest
 import android.annotation.TargetApi
@@ -14,7 +14,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
-import androidx.navigation.fragment.findNavController
 import com.google.zxing.ResultPoint
 import com.google.zxing.client.android.BeepManager
 import com.journeyapps.barcodescanner.BarcodeCallback
@@ -30,7 +29,8 @@ import kotlinx.android.synthetic.main.fragment_scan.*
  * Use the [ScanFragment.newInstance] factory method to
  * create an instance of this fragment.
  */
-class ScanFragment : Fragment(), DialogResult.OnClickDialogButton {
+class ScanFragment : Fragment(),
+    DialogResult.OnClickDialogButton {
     lateinit var beepManager: BeepManager
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

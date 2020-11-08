@@ -18,7 +18,6 @@ android {
         testInstrumentationRunner rootProject.ext.testInstrumentationRunner
 
         buildConfigField("String", "BASE_URL", "\"https://www.thesportsdb.com/\"")
-        buildConfigField("String", "TSDB_implementation_KEY", "\"4012899\"")
     }
 
     buildTypes {
@@ -88,7 +87,7 @@ dependencies {
     implementation appDependencies.lifecycle
     annotationProcessor appDependencies.lifecycleCompiler
 
-    
+    debugImplementation appDependencies.chuck
 
     testImplementation appTestDependencies.jUnit
     androidTestImplementation appTestDependencies.testExt

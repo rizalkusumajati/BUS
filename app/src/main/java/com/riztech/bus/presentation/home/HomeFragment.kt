@@ -1,4 +1,4 @@
-package com.riztech.bus.presentation
+package com.riztech.bus.presentation.home
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.riztech.bus.R
+import com.riztech.bus.presentation.HomeFragmentDirections
 import kotlinx.android.synthetic.main.fragment_home.*
 
 // TODO: Rename parameter arguments, choose names that match
@@ -34,12 +35,14 @@ class HomeFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         btnScan.setOnClickListener {
-            val action = HomeFragmentDirections.goToScan()
+            val action =
+                HomeFragmentDirections.goToScan()
             findNavController().navigate(action)
         }
 
         tvJalur.setOnClickListener {
-            val action = HomeFragmentDirections.goToJalur()
+            val action =
+                HomeFragmentDirections.goToJalur()
             findNavController().navigate(action)
         }
     }

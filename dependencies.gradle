@@ -32,6 +32,7 @@ ext {
     lottieVersion = "3.4.4"
     zxingEmbeddedVersion = "4.1.0"
     zxingCoreVersion = "3.3.0"
+    chuckVersion = "1.1.0"
 
     appDependencies = [
             kotlin                : "org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion",
@@ -69,7 +70,8 @@ ext {
             daggerCompiler        : "com.google.dagger:dagger-compiler:$daggerVersion",
             lottie                : "com.airbnb.android:lottie:$lottieVersion",
             zxingEmbedded         : "com.journeyapps:zxing-android-embedded:$zxingEmbeddedVersion",
-            zxingCore             : "com.google.zxing:core:$zxingCoreVersion"
+            zxingCore             : "com.google.zxing:core:$zxingCoreVersion",
+            chuck                 : "com.readystatesoftware.chuck:library:$chuckVersion"
 
     ]
 

@@ -1,4 +1,4 @@
-package com.riztech.bus.presentation
+package com.riztech.bus.presentation.scan
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -22,7 +22,11 @@ class DialogResult(val title: String, val desc: String, val listener: OnClickDia
             val args = Bundle()
             args.putString(KEY_TITLE, title)
             args.putString(KEY_SUBTITLE, subTitle)
-            val fragment = DialogResult(title, subTitle, listener)
+            val fragment = DialogResult(
+                title,
+                subTitle,
+                listener
+            )
             fragment.arguments = args
             return fragment
         }

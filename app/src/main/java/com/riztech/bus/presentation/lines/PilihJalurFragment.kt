@@ -1,11 +1,10 @@
-package com.riztech.bus.presentation
+package com.riztech.bus.presentation.lines
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.LinearLayout
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.riztech.bus.R
@@ -17,7 +16,8 @@ import kotlinx.android.synthetic.main.fragment_pilih_jalur.*
  * Use the [PilihJalurFragment.newInstance] factory method to
  * create an instance of this fragment.
  */
-class PilihJalurFragment : Fragment(), JalurAdapter.OnClickItem {
+class PilihJalurFragment : Fragment(),
+    JalurAdapter.OnClickItem {
     lateinit var adapter: JalurAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -37,7 +37,10 @@ class PilihJalurFragment : Fragment(), JalurAdapter.OnClickItem {
 
         rvJalur.apply {
             layoutManager = LinearLayoutManager(requireContext(), RecyclerView.VERTICAL, false)
-            adapter = JalurAdapter(arrayListOf(), this@PilihJalurFragment)
+            adapter = JalurAdapter(
+                arrayListOf(),
+                this@PilihJalurFragment
+            )
         }
     }
 
