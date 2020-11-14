@@ -5,6 +5,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.riztech.bus.R
+import kotlinx.android.synthetic.main.jalur_item.view.*
 
 class JalurAdapter(private val list: ArrayList<String>, private val listener: OnClickItem) :RecyclerView.Adapter<JalurAdapter.JalurViewHolder>(){
 
@@ -13,8 +14,9 @@ class JalurAdapter(private val list: ArrayList<String>, private val listener: On
     }
 
     class JalurViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
-        fun bind(string: String, listener: OnClickItem){
 
+        fun bind(string: String, listener: OnClickItem){
+            itemView.tvGenre.text = "Jalur $string"
         }
     }
 
@@ -25,7 +27,7 @@ class JalurAdapter(private val list: ArrayList<String>, private val listener: On
             )
         )
 
-    override fun getItemCount(): Int = list.size
+    override fun getItemCount(): Int = 5
 
-    override fun onBindViewHolder(holder: JalurViewHolder, position: Int) = holder.bind(list[position], listener)
+    override fun onBindViewHolder(holder: JalurViewHolder, position: Int) = holder.bind((position+1).toString(), listener)
 }

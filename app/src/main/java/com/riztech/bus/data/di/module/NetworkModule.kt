@@ -37,7 +37,7 @@ class NetworkModule {
                 LocalValue.userData?.let {user->
                     if (!user.token_type.isEmpty() && !user.access_token.isEmpty()){
                         val newRequest = original.newBuilder()
-                            .addHeader("accept",   "application/vnd.bus.v1+json")
+                            .addHeader("Accept",   "application/vnd.bus.v1+json")
                             .addHeader("Authorization",  "${LocalValue.userData?.token_type + " " + LocalValue.userData?.access_token}")
                             .build()
                         chain.proceed(newRequest)
